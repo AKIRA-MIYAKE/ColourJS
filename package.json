@@ -1,7 +1,7 @@
 {
   "name": "ColourJS",
   "version": "1.0.0",
-  "description": "ColourJS ========",
+  "description": "ColourJS is library of manipulate color in JavaScript.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
