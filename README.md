@@ -8,7 +8,7 @@ ColourJS is library of manipulate color in JavaScript.
     var blue = Colour(0, 0, 255);   // RGB parameters
     var red = Colour([255, 0, 0]);  // RGB array
 
-# Create Colour object from color coord
+## Create Colour object from color coord
 
     var rgb = Colour.RGB(255, 255, 255);    // Coord from param
     var white = Colour(rgb);
@@ -21,7 +21,7 @@ ColourJS is library of manipulate color in JavaScript.
       a: 76,
       b: 68
     });                       // Coord from object
-    var red = Colour(lab); 
+    var red = Colour(lab);
 
 ## Get color coord from Colour object
 
