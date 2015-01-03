@@ -2,33 +2,117 @@ ColourJS
 ========
 ColourJS is library of manipulate color in JavaScript.
 
-## Create Colour object
+# Colour object
+### Create Colour object
 
-    var white = Colour('#ffffff');  // Hex color code
-    var blue = Colour(0, 0, 255);   // RGB parameters
-    var red = Colour([255, 0, 0]);  // RGB array
+```js
+/* From color code */
+var red = Colour('#ff0000');
 
-## Create Colour object from color coord
+/* From RGB color model values */
+var blue = Colour(0, 0, 255);
 
-    var rgb = Colour.RGB(255, 255, 255);    // Coord from param
-    var white = Colour(rgb);
+/* From array of RGB color model values */
+var green = Colour([0, 255, 0]);
 
-    var hex = Colour.HEX([240, 100, 100]);  // Coord from array
-    var blue = Colour(hex);
+/* From coord of color system object */
+var CIELab = Colour.HSV(50, 0, 0);
+var gray = Colour(CIELab);
+```
 
-    var lab = Colour.CIELab({
-      L: 53,
-      a: 76,
-      b: 68
-    });                       // Coord from object
-    var red = Colour(lab);
+### Get color coord object
 
-## Get color coord from Colour object
+```js
+var red = Colour('#ff0000');
 
-    var colour = Colour(160, 160, 160);
+var RGB = red.RGB();
+var HSV = red.HSV();
+var LinearRGB = red.LinearRGB();
+var XYZ = red.XYZ();
+var CIELab = red.CIELab();
+```
 
-    var rgb = colour.RGB();         // RGB
-    var hsv = colour.HSV();         // HSV
-    var lrgb = colour.LinearRGB();  // Linear RBB
-    var xyz = colour.XYZ();         // XYZ
-    var lab = colour.CIELab();      // CIELab
+# Color coord object
+Color coord object has three colors values.  
+You refer to an colors values by referring to the index number.
+
+### RGB
+Three colors values of 0–255.  
+RGB object can convert to HSV and LinearRGB.  
+
+```js
+var RGB = Colour.RGB(150, 120, 180);
+RGB.hex();         // return hex string like 9678b4
+RGB.toHSV();       // return HSV object
+RGB.toLinearRGB(); // return LinearRGB object
+```
+
+### HSV
+H color value of 0-359, and others values of 0-100.
+HSV object can convert to RGB.
+
+```js
+var HSV = Colour.HSV(270, 30, 70);
+HSV.toRGB();       // return RGB object
+```
+
+### LinearRGB
+In safe color mode, Three colors values of 0-1.
+Default gamma value of 2.2.
+LinearRGB object can covert to RGB and XYZ.
+
+```js
+var LinearRGB = Colour.LinearRGB(0.3, 0.2, 0.5);
+LinearRGB.toRGB(); // return RGB object
+LinearRGB.toXYZ(); // return XYZ object
+```
+
+### XYZ
+XYZ object can convert to LinearRGB and CIELab.
+
+```js
+var XYZ = Colour.XYZ(30, 26, 50);
+XYZ.toLinearRGB(); // return LinearRGB object
+XYZ.toCIELab();    // return CIELab object
+```
+
+### CIELab
+CIELab object can convert to XYZ.
+
+```js
+var CIELab = Colour.CIELab(58, 19, -21);
+CIElab.toXYZ();    // return XYZ object
+```
+
+# Manipulate color
+Colour object is immutable.  
+Manipulate methods returns new colour object.
+
+### Lighten
+Argument value of 0-1.
+
+```js
+var colour = Colour(150, 120, 180);
+var lighter = colour.lighten(0.3);
+```
+
+### Darken
+Argument value of 0-1.
+
+```js
+var colour = Colour(150, 120, 180);
+var darker = colour.darken(0.3);
+```
+
+### Mix
+```js
+var colour1 = Colour(150, 120, 180);
+var colour2 = Colour(100, 200, 30);
+var mixedColour = colour1.mix(colour2);
+```
+
+### Adjust Hue
+```js
+var colour = Colour(150, 120, 180);
+var newColour = colour.adjustHue(120);
+```
