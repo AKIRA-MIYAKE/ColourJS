@@ -16,7 +16,7 @@ var blue = Colour(0, 0, 255);
 var green = Colour([0, 255, 0]);
 
 /* From coord of color system object */
-var CIELab = Colour.HSV(50, 0, 0);
+var CIELab = Colour.CIELab(50, 0, 0);
 var gray = Colour(CIELab);
 ```
 
