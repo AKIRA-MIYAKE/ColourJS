@@ -34,7 +34,7 @@ var CIELab = red.CIELab();
 
 # Color coord object
 Color coord object has three colors values.  
-You refer to an colors values by referring to the index number.
+You refer to an colors values by referring to the index number.  
 
 ### RGB
 Three colors values of 0–255.  
@@ -48,8 +48,8 @@ RGB.toLinearRGB(); // return LinearRGB object
 ```
 
 ### HSV
-H color value of 0-359, and others values of 0-100.
-HSV object can convert to RGB.
+H color value of 0-359, and others values of 0-100.  
+HSV object can convert to RGB.  
 
 ```js
 var HSV = Colour.HSV(270, 30, 70);
@@ -57,9 +57,9 @@ HSV.toRGB();       // return RGB object
 ```
 
 ### LinearRGB
-In safe color mode, Three colors values of 0-1.
-Default gamma value of 2.2.
-LinearRGB object can covert to RGB and XYZ.
+In safe color mode, Three colors values of 0-1.  
+Default gamma value of 2.2.  
+LinearRGB object can covert to RGB and XYZ.  
 
 ```js
 var LinearRGB = Colour.LinearRGB(0.3, 0.2, 0.5);
@@ -68,7 +68,7 @@ LinearRGB.toXYZ(); // return XYZ object
 ```
 
 ### XYZ
-XYZ object can convert to LinearRGB and CIELab.
+XYZ object can convert to LinearRGB and CIELab.  
 
 ```js
 var XYZ = Colour.XYZ(30, 26, 50);
@@ -77,7 +77,7 @@ XYZ.toCIELab();    // return CIELab object
 ```
 
 ### CIELab
-CIELab object can convert to XYZ.
+CIELab object can convert to XYZ.  
 
 ```js
 var CIELab = Colour.CIELab(58, 19, -21);
@@ -86,10 +86,10 @@ CIElab.toXYZ();    // return XYZ object
 
 # Manipulate color
 Colour object is immutable.  
-Manipulate methods returns new colour object.
+Manipulate methods returns new colour object.  
 
 ### Lighten
-Argument value of 0-1.
+Argument value of 0-1.  
 
 ```js
 var colour = Colour(150, 120, 180);
@@ -97,7 +97,7 @@ var lighter = colour.lighten(0.3);
 ```
 
 ### Darken
-Argument value of 0-1.
+Argument value of 0-1.  
 
 ```js
 var colour = Colour(150, 120, 180);
