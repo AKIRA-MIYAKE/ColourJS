@@ -116,3 +116,9 @@ var mixedColour = colour1.mix(colour2);
 var colour = Colour(150, 120, 180);
 var newColour = colour.adjustHue(120);
 ```
+
+### Clone
+```js
+var colour = Colour(150, 120, 180);
+var newColour = colour.clone();
+```
