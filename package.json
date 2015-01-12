@@ -1,6 +1,6 @@
 {
-  "name": "ColourJS",
-  "version": "0.0.1",
+  "name": "Colour",
+  "version": "0.0.2",
   "description": "ColourJS is library of manipulate color in JavaScript.",
   "main": "index.js",
   "scripts": {
