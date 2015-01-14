@@ -104,6 +104,22 @@ var colour = Colour(150, 120, 180);
 var darker = colour.darken(0.3);
 ```
 
+### Saturate
+Argument value of 0-1.  
+
+```js
+var colour = Colour(150, 120, 180);
+var vivid = colour.saturate(0.3);
+```
+
+### Desaturate
+Argument value of 0-1.
+
+```js
+var colour = Colour(150, 120, 180);
+var dull = colour.desaturate(0.3);
+```
+
 ### Mix
 ```js
 var colour1 = Colour(150, 120, 180);
