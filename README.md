@@ -88,6 +88,12 @@ CIElab.toXYZ();    // return XYZ object
 Colour object is immutable.  
 Manipulate methods returns new colour object.  
 
+### Adjust Hue
+```js
+var colour = Colour(150, 120, 180);
+var newColour = colour.adjustHue(120);
+```
+
 ### Lighten
 Argument value of 0-1.  
 
@@ -125,12 +131,6 @@ var dull = colour.desaturate(0.3);
 var colour1 = Colour(150, 120, 180);
 var colour2 = Colour(100, 200, 30);
 var mixedColour = colour1.mix(colour2);
-```
-
-### Adjust Hue
-```js
-var colour = Colour(150, 120, 180);
-var newColour = colour.adjustHue(120);
 ```
 
 ### Clone
